@@ -19,6 +19,7 @@ fc7 = AlexNet(resized, feature_extract=True)
 # HINT: Look at the final layer definition in alexnet.py to get an idea of what this
 # should look like.
 shape = (fc7.get_shape().as_list()[-1], nb_classes)  # use this shape for the weight matrix
+print(shape[0].shape)
 probs = tf.nn.softmax(tf.nn.relu_layer(fc7, tf.cast(shape[0], tf.float32), tf.cast(shape[1], tf.float32)))
 
 init = tf.global_variables_initializer()
