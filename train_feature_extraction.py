@@ -60,6 +60,8 @@ def evaluate(X_data, y_data):
         total_accuracy += (accuracy * len(batch_x))
     return total_accuracy / num_examples
 
+EPOCHS = 6
+
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     num_examples = len(X_train)
