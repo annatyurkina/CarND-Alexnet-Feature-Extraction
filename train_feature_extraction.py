@@ -7,7 +7,7 @@ from alexnet import AlexNet
 training_file = '../train.p'
 with open(training_file, mode='rb') as f:
     train = pickle.load(f)
- X_train, y_train = train['features'], train['labels']
+X_train, y_train = train['features'], train['labels']
 
 # TODO: Split data into training and validation sets.
 from sklearn.utils import shuffle
