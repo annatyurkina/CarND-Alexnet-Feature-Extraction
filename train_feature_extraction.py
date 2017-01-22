@@ -50,6 +50,13 @@ accuracy_operation = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 # TODO: Train and evaluate the feature extraction model.
 BATCH_SIZE = 128
 
+import time
+import datetime
+
+def gettime():
+    time = datetime.datetime.utcnow()
+    print(time)
+
 def evaluate(X_data, y_data):
     num_examples = len(X_data)
     total_accuracy = 0
